@@ -17,7 +17,10 @@ const Accordion = ({ items }) => {
   // Second element is setter element that sets value of
   // first element.
   // Function parameter is the default value of state
-  // element
+  // element.
+  // When setter is called it will cause the component
+  // to rer-ender itself and whole Accordion functional
+  // component function to run from the start
   const [activeIndex, setActiveIndex] = useState(null);
 
   const onTitleClick = (index) => {
