@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
-const Dropdown = ({ options, selected, onSelectedChange }) => {
+const Dropdown = ({ label, options, selected, onSelectedChange }) => {
   // Piece of state open gets boolean true or false
   const [open, setOpen] = useState(false);
   // useRef() allows to get a direct reference to DOM
@@ -73,7 +73,7 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
   return (
     <div ref={ref} className="ui form">
       <div className="field">
-        <label className="label">Select a Color</label>
+        <label className="label">{label}</label>
         <div
           // onClick set state open to opposite of current
           // value. If open true add visible classes and
@@ -89,7 +89,6 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
           </div>
         </div>
       </div>
-      <h1 style={{ color: `${selected.value}` }}>{selected.label}</h1>
     </div>
   );
 };
