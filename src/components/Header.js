@@ -1,20 +1,23 @@
 import React from "react";
+import Link from "./Link";
 
+// Navigation bar component with Link components
+// Link is given props to pass on to <a> tag
 const Header = () => {
   return (
     <div className="ui secondary pointing menu">
-      <a href="/" className="item">
+      <Link href="/" className="item">
         Accordion
-      </a>
-      <a href="/list" className="item">
+      </Link>
+      <Link href="/list" className="item">
         Search
-      </a>
-      <a href="/dropdown" className="item">
+      </Link>
+      <Link href="/dropdown" className="item">
         Dropdown
-      </a>
-      <a href="/translate" className="item">
+      </Link>
+      <Link href="/translate" className="item">
         Translate
-      </a>
+      </Link>
     </div>
   );
 };
